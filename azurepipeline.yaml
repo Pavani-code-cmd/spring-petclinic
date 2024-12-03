@@ -3,13 +3,13 @@ pool:
 trigger:
   - main
 stages:
-  -stage: buildstage
+  - stage: buildstage
    jobs:
-    -job:buildjob
+    - job: buildjob
    steps:
-     - task:Maven@4
+     - task: Maven@4
        inputs:
-         mavenPomFile:pom.xml
-         goal:validate
-         jdkVerionOption:'1.17'
+         mavenPomFile: pom.xml
+         goal: validate
+         jdkVerionOption: '1.17'
        
